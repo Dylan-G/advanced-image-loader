@@ -88,7 +88,7 @@ In case a configuration parameter is defined in both location the resourceQuery 
 - `format: string`: define the output format of the images (valid values are `jpeg`, `png`, `tiff`, `webp`) `default: 'jpeg'`
 - `quality: integer`: define the compression quality (ignored if format is `png`) `default: '95'`
 - `placeholder: integer`: if specified define the width of the image used as placeholder and inlined as data URI
-- `background: object or string`: define the color of the transparency `default is { r: 0, g: 0, b: 0, alpha: 1 }`
+- `background: object or string`: define the color of the transparency `default: { r: 0, g: 0, b: 0, alpha: 1 }`
 - `name: function or string`: define the naming of the output files `default: '[name]-[width]@[quality]'`
   - if a string is provided it will be interpolated and the following values will be replaced
     * `[width]` the width of the output image
