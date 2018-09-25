@@ -181,3 +181,7 @@ exports['name should be validated ${JSON.stringify(testCase)} 4'] = "advanced-im
 
 exports['name should be validated ${JSON.stringify(testCase)} 5'] = "advanced-image-loader options validation error:\n    - option \"name\" must be either a non empty string or a function"
 
+exports['background should be configurable using loader options 1'] = "module.exports = {\n  src: __webpack_public_path__ + \"test-1600@95.jpg\",\n  width: 1600,\n  height: 900,\n  toString: function() {return __webpack_public_path__ + \"test-1600@95.jpg\";},\n  images: [\n    {\n      src: __webpack_public_path__ + \"test-1600@95.jpg\",\n      width: 1600,\n      height: 900\n    }\n  ]\n};"
+
+exports['background should be configurable using resourceQuery options 1'] = "module.exports = {\n  src: __webpack_public_path__ + \"test-1600@95.jpg\",\n  width: 1600,\n  height: 900,\n  toString: function() {return __webpack_public_path__ + \"test-1600@95.jpg\";},\n  images: [\n    {\n      src: __webpack_public_path__ + \"test-1600@95.jpg\",\n      width: 1600,\n      height: 900\n    }\n  ]\n};"
+

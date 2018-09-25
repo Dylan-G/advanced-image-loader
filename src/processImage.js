@@ -12,6 +12,11 @@ const process = function ({ image, options, width }) {
         .resize(width, null);
     }
 
+    if (options.background) {
+      processingImage = processingImage
+        .background(options.background);
+    }
+
     processingImage
       .toFormat(options.format, {
         force: true,

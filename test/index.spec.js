@@ -370,4 +370,18 @@ describe('advanced-image-loader', () => {
           .should.be.rejected);
     });
   });
+
+  describe('background', () => {
+    it('background should be configurable using loader options', () => requireImage('./assets/test.png', { background: { r: 0, g: 0, b: 0, alpha: 1 } })
+        .then(({ result, emitFileSpy }) => {
+          emitFileSpy.should.have.callCount(1);
+          snapshot(result);
+        }));
+
+    it('background should be configurable using resourceQuery options', () => requireImage('./assets/test.png?background=#000000')
+        .then(({ result, emitFileSpy }) => {
+          emitFileSpy.should.have.callCount(1);
+          snapshot(result);
+        }));
+  });
 });

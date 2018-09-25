@@ -12,6 +12,16 @@
           "enum": ["original"]
         }
       ]
+    },
+    "color": {
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "string"
+        }
+      ]
     }
   },
   "properties": {
@@ -47,6 +57,9 @@
     },
     "width": {
       "$ref": "#/definitions/width"
+    },
+    "background": {
+      "$ref": "#/definitions/color"
     }
   },
   "required": [
