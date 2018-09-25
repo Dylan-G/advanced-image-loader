@@ -14,7 +14,8 @@ const process = function ({ image, options, width }) {
 
     if (options.background) {
       processingImage = processingImage
-        .background(options.background);
+        .background(options.background)
+        .embed();
     }
 
     processingImage
