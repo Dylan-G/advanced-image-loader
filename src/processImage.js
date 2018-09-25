@@ -12,10 +12,10 @@ const process = function ({ image, options, width }) {
         .resize(width, null);
     }
 
-    if (options.background) {
+    if (options.background && options.format !== 'png') {
       processingImage = processingImage
         .background(options.background)
-        .embed();
+        .flatten();
     }
 
     processingImage
