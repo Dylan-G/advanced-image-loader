@@ -8,14 +8,12 @@ const process = function ({ image, options, width }) {
 
     if (width !== 'original') {
       processingImage = processingImage
-        .withoutEnlargement(true)
-        .resize(width, null);
+        .resize(width, null, {withoutEnlargement: true});
     }
 
     if (options.background && options.format !== 'png') {
       processingImage = processingImage
-        .background(options.background)
-        .flatten();
+        .flatten({background: options.background});
     }
 
     processingImage
